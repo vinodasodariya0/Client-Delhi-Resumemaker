@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><!-- Creator: CorelDRAW X7 -->
+<svg style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" height="5.21516in" version="1.1" viewBox="0 0 8268 5215" width="8.26772in" xmlns="http://www.w3.org/2000/svg"
+xml:space="preserve"
+ >
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil3 {fill:none}
+    .fil2 {fill:#00AFEF}
+    .fil0 {fill:#00AFEF;fill-opacity:0.250980}
+    .fil1 {fill:#00AFEF;fill-opacity:0.501961}
+    .fil4 {fill:#00AFEF;fill-opacity:0.749020}
+   ]]>
+  </style>
+   <clipPath id="id0">
+    <path d="M0 3565l1502 -862 -1502 -863 0 1725z"/>
+   </clipPath>
+   <clipPath id="id1">
+    <path d="M0 3565l1502 -862 -1502 -863 0 1725z"/>
+   </clipPath>
+     <mask id="id2">
+  <linearGradient gradientUnits="userSpaceOnUse" id="id3" x1="437.893" x2="1064.31" y1="3175.23" y2="2230.22">
+   <stop style="stop-opacity:1; stop-color:white" offset="0"/>
+   <stop style="stop-opacity:0; stop-color:white" offset="1"/>
+  </linearGradient>
+      <rect style="fill:url(#id3)" height="1732" width="1509" x="-3" y="1837"/>
+     </mask>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon class="fil0" points="4789,2925 0,175 0,0 8268,0 8268,928 "/>
+  <polygon class="fil1" points="7325,4380 4789,2925 8268,928 8268,3834 "/>
+  <g style="clip-path:url(#id0)">
+   <polygon class="fil1" points="0,1840 1502,1840 1502,3565 0,3565 "/>
+  </g>
+  <g style="clip-path:url(#id1)">
+   <g id="_506425016">
+    <polygon style="mask:url(#id2)" class="fil2" id="1" points="0,3565 1502,2703 0,1840 "/>
+   </g>
+  </g>
+  <polygon class="fil3" points="0,3565 1502,2703 0,1840 "/>
+  <polygon class="fil1" points="5879,5215 6674,4757 0,927 0,1840 "/>
+  <polygon class="fil4" points="7325,4380 6674,4757 0,927 0,175 "/>
+  <rect class="fil3" height="276" width="8268" y="684"/>
+ </g>
+</svg>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <FrameLayout
+        android:id="@+id/sharemainlayy"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#b3000000"
+        android:gravity="center"
+        android:padding="@dimen/lrtbp_5">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            card_view:cardBackgroundColor="#ffffffff"
+            card_view:cardCornerRadius="@dimen/lrtbp_5">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/lrtbp_5"
+                android:layout_marginRight="@dimen/lrtbp_5"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/lrtbp_15">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/lrtbp_10"
+                        android:gravity="center"
+                        android:text="If you like this app rate us 5 stars in play store, which helps us to reach the app towards more number of users."
+                        android:textColor="#ff000000"
+                        android:textSize="@dimen/txt_18" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/lrtbp_15"
+                        android:layout_marginRight="@dimen/lrtbp_15"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/wh_50"
+                            android:src="@drawable/five_stars" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/lrtbp_10"
+                        android:gravity="center"
+                        android:text="Rate 5 star"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="#ff000000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/lrtbp_5">
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/lrtbp_5"
+                        android:text="Rate Us"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="#ffffffff"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/lrtbp_15"
+                        android:layout_weight="0.33"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/lrtbp_5"
+                        android:text="Feedback"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="#ffffffff"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</FrameLayout>

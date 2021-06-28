@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/wh_20"
+            android:layout_marginTop="@dimen/wh_20"
+            android:layout_marginRight="@dimen/wh_20"
+            android:layout_marginBottom="@dimen/wh_2"
+            android:background="@drawable/card"
+            android:gravity="center"
+            android:padding="@dimen/lrtbp_5">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/academic_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Academic Info"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/academic_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edit" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/cycle_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/top"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Academic_cycle"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_more_academic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/txt_25"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5.0dip">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:padding="@dimen/lrtbp_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/wh_2"
+                        android:text="Add More"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="@dimen/txt_25"
+                        android:layout_height="@dimen/txt_25"
+                        android:src="@drawable/add" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_profile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/lrtbp_10"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5.0dip"
+                app:cardElevation="@dimen/lrtbp_5">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/wh_2"
+                            android:text="Note : Enter your highest qualification first"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:padding="@dimen/lrtbp_5">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/academic_course"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="Course / Degree / Class*"
+                                android:inputType="textCapSentences"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:padding="@dimen/lrtbp_5">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/academic_institute"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="School / College / University Name *"
+                                android:inputType="textCapSentences"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:padding="@dimen/lrtbp_5">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/academic_cgpa"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="CGPA / Percentage *"
+                                android:inputType="textVisiblePassword"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:id="@+id/year_pic"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/lrtbp_5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/lrtbp_10"
+                                android:layout_weight="1.0"
+                                android:text="Year of Passing  / Pursuing *"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/academic_year"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/lrtbp_10"
+                                android:layout_marginRight="@dimen/lrtbp_10"
+                                android:layout_weight="1.1"
+                                android:background="@drawable/border"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:inputType="textVisiblePassword"
+                                android:padding="@dimen/lrtbp_5"
+                                android:singleLine="true" />
+
+                            <ImageView
+                                android:id="@+id/yr_pic"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.8"
+                                android:background="@drawable/calendar" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.3"
+                                android:gravity="center"
+                                android:text="Optional" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <nithra.resume.maker.cv.builder.app.Fragment.ExpandableHeightRecyclerView
+                            android:id="@+id/academic_more_recycle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/academic_add_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="@dimen/lrtbp_10"
+                            android:layout_marginTop="@dimen/lrtbp_10"
+                            android:layout_marginRight="@dimen/lrtbp_10"
+                            android:layout_marginBottom="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="center"
+                                android:padding="@dimen/lrtbp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/wh_2"
+                                    android:text="Add More"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/txt_25"
+                                    android:layout_height="@dimen/txt_25"
+                                    android:src="@drawable/add" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <Button
+                            android:id="@+id/academic_save"
+                            android:layout_width="@dimen/wh_150"
+                            android:layout_height="@dimen/wh_35"
+                            android:layout_marginLeft="@dimen/lrtbp_5"
+                            android:layout_marginTop="@dimen/lrtbp_5"
+                            android:layout_marginRight="@dimen/lrtbp_5"
+                            android:layout_marginBottom="@dimen/wh_70"
+                            android:background="@drawable/red"
+                            android:text="Save"
+                            android:textColor="#ffffffff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/edit_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/top"
+            android:background="#88000000"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="140.0dip"
+                android:layout_marginLeft="@dimen/lrtbp_15"
+                android:layout_marginRight="@dimen/txt_25"
+                android:background="@drawable/chat02">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/lrtbp_15"
+                    android:layout_marginTop="@dimen/wh_50"
+                    android:layout_marginRight="@dimen/lrtbp_15"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/title_per"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:hint="eg: Academic Details"
+                        android:inputType="textCapWords" />
+
+                    <ImageView
+                        android:id="@+id/correct"
+                        android:layout_width="50.0dip"
+                        android:layout_height="50.0dip"
+                        android:padding="@dimen/lrtbp_5"
+                        android:src="@drawable/correct" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

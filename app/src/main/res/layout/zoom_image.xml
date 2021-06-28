@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#70000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/lrtbp_10">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingLeft="@dimen/lrtbp_15"
+        android:paddingTop="@dimen/lrtbp_15"
+        android:paddingRight="@dimen/lrtbp_15"
+        android:paddingBottom="@dimen/lrtbp_20" />
+</LinearLayout>

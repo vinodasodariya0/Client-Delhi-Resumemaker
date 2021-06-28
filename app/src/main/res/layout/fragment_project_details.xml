@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/wh_20"
+            android:layout_marginTop="@dimen/wh_20"
+            android:layout_marginRight="@dimen/wh_20"
+            android:layout_marginBottom="@dimen/wh_2"
+            android:background="@drawable/card"
+            android:gravity="center"
+            android:padding="@dimen/lrtbp_5">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/project_head_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Project Details"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/project_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edit" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/cycle_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/top"
+            android:orientation="vertical">
+
+            <nithra.resume.maker.cv.builder.app.Fragment.ExpandableHeightRecyclerView
+                android:id="@+id/project_cycle"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_more_project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/txt_25"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5.0dip">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:padding="@dimen/lrtbp_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/wh_2"
+                        android:text="Add More"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="@dimen/txt_25"
+                        android:layout_height="@dimen/txt_25"
+                        android:src="@drawable/add" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_profile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/lrtbp_10"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5.0dip"
+                app:cardElevation="@dimen/lrtbp_5">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:padding="@dimen/lrtbp_5">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/project_title"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="Project Title *"
+                                android:inputType="textCapSentences"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:padding="@dimen/lrtbp_5">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/project_description"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="left"
+                                android:hint="Project Description *"
+                                android:inputType="textCapSentences|textMultiLine"
+                                android:lines="5"
+                                android:overScrollMode="ifContentScrolls" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:padding="@dimen/lrtbp_5">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/project_duration"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="Duration *"
+                                android:inputType="textVisiblePassword|textCapSentences"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:padding="@dimen/lrtbp_5">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/project_role"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="left"
+                                android:hint="Role *"
+                                android:inputType="textCapSentences|textMultiLine"
+                                android:lines="5"
+                                android:overScrollMode="ifContentScrolls" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/lrtbp_5"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/wh_2"
+                            android:layout_weight="1.0"
+                            android:background="#ffd6d4d4" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:gravity="center"
+                            android:text="Optional" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/wh_2"
+                            android:layout_weight="1.0"
+                            android:background="#ffd6d4d4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:padding="@dimen/lrtbp_5">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/project_cmpny"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="Company / Institute"
+                                android:inputType="textCapSentences"
+                                android:lines="2"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:padding="@dimen/lrtbp_5">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/project_teamsize"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="Team Size"
+                                android:inputType="textCapSentences"
+                                android:singleLine="true" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <nithra.resume.maker.cv.builder.app.Fragment.ExpandableHeightRecyclerView
+                            android:id="@+id/project_more_recycle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/project_add_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="@dimen/lrtbp_10"
+                            android:layout_marginTop="@dimen/lrtbp_10"
+                            android:layout_marginRight="@dimen/lrtbp_10"
+                            android:layout_marginBottom="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="center"
+                                android:padding="@dimen/lrtbp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/wh_2"
+                                    android:text="Add More"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/txt_25"
+                                    android:layout_height="@dimen/txt_25"
+                                    android:src="@drawable/add" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <Button
+                            android:id="@+id/project_save"
+                            android:layout_width="@dimen/wh_150"
+                            android:layout_height="@dimen/wh_35"
+                            android:layout_marginLeft="@dimen/lrtbp_5"
+                            android:layout_marginTop="@dimen/lrtbp_5"
+                            android:layout_marginRight="@dimen/lrtbp_5"
+                            android:layout_marginBottom="@dimen/wh_70"
+                            android:background="@drawable/red"
+                            android:text="Save"
+                            android:textColor="#ffffffff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/project_edit_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/top"
+            android:background="#88000000"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="140.0dip"
+                android:layout_marginLeft="@dimen/lrtbp_15"
+                android:layout_marginRight="@dimen/txt_25"
+                android:background="@drawable/chat02">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/lrtbp_15"
+                    android:layout_marginTop="@dimen/wh_50"
+                    android:layout_marginRight="@dimen/lrtbp_15"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/project_update_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:hint="eg: Project Info"
+                        android:inputType="textCapWords" />
+
+                    <ImageView
+                        android:id="@+id/project_update"
+                        android:layout_width="50.0dip"
+                        android:layout_height="50.0dip"
+                        android:padding="@dimen/lrtbp_5"
+                        android:src="@drawable/correct" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

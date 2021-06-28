@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/wh_20"
+            android:layout_marginTop="@dimen/wh_20"
+            android:layout_marginRight="@dimen/wh_20"
+            android:layout_marginBottom="@dimen/wh_2"
+            android:background="@drawable/card"
+            android:gravity="center"
+            android:padding="@dimen/lrtbp_5">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/view_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Achievements"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_profile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/lrtbp_10"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5.0dip"
+                app:cardElevation="@dimen/lrtbp_5">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/one"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/lrtbp_5"
+                                android:padding="@dimen/lrtbp_5"
+                                app:cardBackgroundColor="@android:color/white"
+                                app:cardCornerRadius="5.0dip"
+                                app:cardElevation="@dimen/lrtbp_5">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/achieve_title"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:gravity="center"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="Achievements"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/achieve_edit"
+                                        android:layout_width="@dimen/txt_25"
+                                        android:layout_height="@dimen/txt_25"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/edit" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/achieve_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/one"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/lrtbp_10"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/achieve_linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/achieve_text"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <nithra.resume.maker.cv.builder.app.Fragment.ExpandableHeightRecyclerView
+                            android:id="@+id/achieve_more_recycle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/achieve_text"
+                            android:overScrollMode="never" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/achieve_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/achieve_more_recycle"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="center"
+                                android:padding="@dimen/lrtbp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/wh_2"
+                                    android:text="Add More"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/lrtbp_20"
+                                    android:layout_height="@dimen/lrtbp_20"
+                                    android:src="@drawable/add" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:id="@+id/three"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/achieve_add"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/lrtbp_5"
+                                android:padding="@dimen/lrtbp_5"
+                                app:cardBackgroundColor="@android:color/white"
+                                app:cardCornerRadius="5.0dip"
+                                app:cardElevation="@dimen/lrtbp_5">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/indust_title"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:gravity="center"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="Industrial Visit"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/indust_edit"
+                                        android:layout_width="@dimen/txt_25"
+                                        android:layout_height="@dimen/txt_25"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/edit" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/indust_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/three"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/lrtbp_10"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/indust_linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/indust_text"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <nithra.resume.maker.cv.builder.app.Fragment.ExpandableHeightRecyclerView
+                            android:id="@+id/indust_more_recycle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/indust_text"
+                            android:overScrollMode="never" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/indust_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/indust_more_recycle"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="center"
+                                android:padding="@dimen/lrtbp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/wh_2"
+                                    android:text="Add More"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/lrtbp_20"
+                                    android:layout_height="@dimen/lrtbp_20"
+                                    android:src="@drawable/add" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:id="@+id/six"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/indust_add"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/lrtbp_5"
+                                android:padding="@dimen/lrtbp_5"
+                                app:cardBackgroundColor="@android:color/white"
+                                app:cardCornerRadius="5.0dip"
+                                app:cardElevation="@dimen/lrtbp_5">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/inplant_title"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:gravity="center"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="Inplant Training"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/inplant_edit"
+                                        android:layout_width="@dimen/txt_25"
+                                        android:layout_height="@dimen/txt_25"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/edit" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/inplant_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/six"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/lrtbp_10"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/inplant_linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/inplant_text"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <nithra.resume.maker.cv.builder.app.Fragment.ExpandableHeightRecyclerView
+                            android:id="@+id/inplant_more_recycle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/inplant_text"
+                            android:overScrollMode="never" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/inplant_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/inplant_more_recycle"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="center"
+                                android:padding="@dimen/lrtbp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/wh_2"
+                                    android:text="Add More"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/lrtbp_20"
+                                    android:layout_height="@dimen/lrtbp_20"
+                                    android:src="@drawable/add" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:id="@+id/nine"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/inplant_add"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/lrtbp_5"
+                                android:padding="@dimen/lrtbp_5"
+                                app:cardBackgroundColor="@android:color/white"
+                                app:cardCornerRadius="5.0dip"
+                                app:cardElevation="@dimen/lrtbp_5">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/cocurricular_title"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:gravity="center"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="Co-Curricular"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/cocurricular_edit"
+                                        android:layout_width="@dimen/txt_25"
+                                        android:layout_height="@dimen/txt_25"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/edit" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/cocurricular_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/nine"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/lrtbp_10"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/cocurricular_linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cocurricular_text"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <nithra.resume.maker.cv.builder.app.Fragment.ExpandableHeightRecyclerView
+                            android:id="@+id/cocurricular_more_recycle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cocurricular_text"
+                            android:overScrollMode="never" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cocurricular_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cocurricular_more_recycle"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="center"
+                                android:padding="@dimen/lrtbp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/wh_2"
+                                    android:text="Add More"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/lrtbp_20"
+                                    android:layout_height="@dimen/lrtbp_20"
+                                    android:src="@drawable/add" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:id="@+id/eleven"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cocurricular_add"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/lrtbp_5"
+                                android:padding="@dimen/lrtbp_5"
+                                app:cardBackgroundColor="@android:color/white"
+                                app:cardCornerRadius="5.0dip"
+                                app:cardElevation="@dimen/lrtbp_5">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/excurricular_title"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:gravity="center"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="Extra-Curricular"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/excurricular_edit"
+                                        android:layout_width="@dimen/txt_25"
+                                        android:layout_height="@dimen/txt_25"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/edit" />
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:layout_weight="1.0"
+                                android:background="#ffd6d4d4" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/excurricular_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/eleven"
+                            android:layout_margin="@dimen/lrtbp_10"
+                            android:background="@drawable/border"
+                            android:inputType="textCapSentences"
+                            android:padding="@dimen/lrtbp_10"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/excurricular_linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/excurricular_text"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <nithra.resume.maker.cv.builder.app.Fragment.ExpandableHeightRecyclerView
+                            android:id="@+id/excurricular_more_recycle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/excurricular_text"
+                            android:overScrollMode="never" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/excurricular_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/excurricular_more_recycle"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:gravity="center"
+                                android:padding="@dimen/lrtbp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/wh_2"
+                                    android:text="Add More"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/lrtbp_20"
+                                    android:layout_height="@dimen/lrtbp_20"
+                                    android:src="@drawable/add" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/achieve_edit_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/one"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:padding="@dimen/lrtbp_5"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#88000000"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="140.0dip"
+                                android:layout_marginLeft="@dimen/lrtbp_15"
+                                android:layout_marginRight="@dimen/txt_25"
+                                android:layout_marginBottom="@dimen/lrtbp_5"
+                                android:background="@drawable/chat_cent">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/lrtbp_15"
+                                    android:layout_marginTop="@dimen/wh_50"
+                                    android:layout_marginRight="@dimen/lrtbp_15"
+                                    android:gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/achieve_update_text"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:hint="eg: Records"
+                                        android:inputType="textCapWords" />
+
+                                    <ImageView
+                                        android:id="@+id/achieve_update"
+                                        android:layout_width="50.0dip"
+                                        android:layout_height="50.0dip"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/correct" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/indust_edit_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/three"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:padding="@dimen/lrtbp_5"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#88000000"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="140.0dip"
+                                android:layout_marginLeft="@dimen/lrtbp_15"
+                                android:layout_marginRight="@dimen/txt_25"
+                                android:layout_marginBottom="@dimen/lrtbp_5"
+                                android:background="@drawable/chat_cent">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/lrtbp_15"
+                                    android:layout_marginTop="@dimen/wh_50"
+                                    android:layout_marginRight="@dimen/lrtbp_15"
+                                    android:gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/indust_update_text"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:hint="eg: Educational Trip"
+                                        android:inputType="textCapWords" />
+
+                                    <ImageView
+                                        android:id="@+id/indust_update"
+                                        android:layout_width="50.0dip"
+                                        android:layout_height="50.0dip"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/correct" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/inplant_edit_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/six"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:padding="@dimen/lrtbp_5"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#88000000"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="140.0dip"
+                                android:layout_marginLeft="@dimen/lrtbp_15"
+                                android:layout_marginRight="@dimen/txt_25"
+                                android:layout_marginBottom="@dimen/lrtbp_5"
+                                android:background="@drawable/chat_cent">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/lrtbp_15"
+                                    android:layout_marginTop="@dimen/wh_50"
+                                    android:layout_marginRight="@dimen/lrtbp_15"
+                                    android:gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/inplant_update_text"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:hint="eg: Inplant Training"
+                                        android:inputType="textCapWords" />
+
+                                    <ImageView
+                                        android:id="@+id/inplant_update"
+                                        android:layout_width="50.0dip"
+                                        android:layout_height="50.0dip"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/correct" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cocurricular_edit_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/nine"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:padding="@dimen/lrtbp_5"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#88000000"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="140.0dip"
+                                android:layout_marginLeft="@dimen/lrtbp_15"
+                                android:layout_marginRight="@dimen/txt_25"
+                                android:layout_marginBottom="@dimen/lrtbp_5"
+                                android:background="@drawable/chat_cent">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/lrtbp_15"
+                                    android:layout_marginTop="@dimen/wh_50"
+                                    android:layout_marginRight="@dimen/lrtbp_15"
+                                    android:gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/cocurricular_update_text"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:hint="eg: Certificate Courses"
+                                        android:inputType="textCapWords" />
+
+                                    <ImageView
+                                        android:id="@+id/cocurricular_update"
+                                        android:layout_width="50.0dip"
+                                        android:layout_height="50.0dip"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/correct" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/excurricular_edit_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/eleven"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:padding="@dimen/lrtbp_5"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#88000000"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="140.0dip"
+                                android:layout_marginLeft="@dimen/lrtbp_15"
+                                android:layout_marginRight="@dimen/txt_25"
+                                android:layout_marginBottom="@dimen/lrtbp_5"
+                                android:background="@drawable/chat_cent">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/lrtbp_15"
+                                    android:layout_marginTop="@dimen/wh_50"
+                                    android:layout_marginRight="@dimen/lrtbp_15"
+                                    android:gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/excurricular_update_text"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:hint="eg: Extra-Curricular"
+                                        android:inputType="textCapWords" />
+
+                                    <ImageView
+                                        android:id="@+id/excurricular_update"
+                                        android:layout_width="50.0dip"
+                                        android:layout_height="50.0dip"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/correct" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linear"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <Button
+                            android:id="@+id/achieve_save"
+                            android:layout_width="@dimen/wh_150"
+                            android:layout_height="@dimen/wh_35"
+                            android:layout_marginLeft="@dimen/lrtbp_5"
+                            android:layout_marginTop="@dimen/lrtbp_5"
+                            android:layout_marginRight="@dimen/lrtbp_5"
+                            android:layout_marginBottom="@dimen/wh_70"
+                            android:background="@drawable/red"
+                            android:text="Save"
+                            android:textColor="#ffffffff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/edit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/top"
+            android:background="#88000000"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="140.0dip"
+                android:layout_marginLeft="@dimen/lrtbp_15"
+                android:layout_marginRight="@dimen/txt_25"
+                android:background="@drawable/chat02">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/lrtbp_15"
+                    android:layout_marginTop="@dimen/wh_50"
+                    android:layout_marginRight="@dimen/lrtbp_15"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/title_per"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:hint="eg: Contact info"
+                        android:inputType="textCapSentences" />
+
+                    <ImageView
+                        android:id="@+id/correct"
+                        android:layout_width="50.0dip"
+                        android:layout_height="50.0dip"
+                        android:padding="@dimen/lrtbp_5"
+                        android:src="@drawable/correct" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#88000000">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="5.0dip"
+            app:cardElevation="@dimen/lrtbp_5">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gradientPartlyCloudy_c3"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/lrtbp_5">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/lrtbp_5"
+                        android:layout_weight="1.0"
+                        android:background="@color/gradientPartlyCloudy_c3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/spinner"
+                            android:padding="@dimen/lrtbp_10"
+                            android:text="நாமக்கல்"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:layout_weight="8.0"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/filter" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/lrtbp_5"
+                        android:layout_weight="1.0"
+                        android:background="@color/gradientPartlyCloudy_c3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/spinner"
+                            android:padding="@dimen/lrtbp_10"
+                            android:text="ஜோதிடம் - ஜாதகம் - வாஸ்து"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            android:layout_weight="8.0"
+                            android:src="@drawable/filter" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.0"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/lrtbp_5"
+                                        android:src="@drawable/privacy" />
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/wh_2"
+                                            android:layout_weight="5.0"
+                                            android:src="@drawable/call" />
+
+                                        <TextView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.0"
+                                            android:background="@drawable/spinner"
+                                            android:text="+91 8526935727"
+                                            android:textColor="#ff045603"
+                                            android:textSize="@dimen/txt_10"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="2.0dip"
+                                    android:layout_height="fill_parent"
+                                    android:layout_margin="@dimen/wh_2"
+                                    android:background="#ffd9d5d5" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="வாஸ்து மற்றும் கணித ஜோதிடம்"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/pink3"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:drawableRight="@drawable/ic_menu_share"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="துல்லியமாக எதிர்கால பலன்கள் அறிந்து கொள்ளலாம். விதியை உறைப்போம் . மதியால் மாற்றம் பெறுவோம்."
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_10" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/trans"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:id="@+id/parent_lay"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/lrtbp_10"
+                                    android:layout_marginTop="@dimen/lrtbp_5"
+                                    android:layout_marginRight="@dimen/lrtbp_5">
+
+                                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        card_view:cardCornerRadius="@dimen/lrtbp_5"
+                                        card_view:cardElevation="@dimen/lrtbp_10"
+                                        card_view:cardUseCompatPadding="true">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="100.0dip">
+
+                                                <LinearLayout
+                                                    android:id="@+id/topLay"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal">
+
+                                                    <TextView
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_weight="1.0"
+                                                        android:padding="@dimen/lrtbp_5"
+                                                        android:text="வாஸ்து மற்றும் கணித ஜோதிடம்"
+                                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                                        android:textColor="@color/pink3"
+                                                        android:textStyle="bold" />
+
+                                                    <ImageView
+                                                        android:id="@+id/btnLike"
+                                                        android:layout_width="@dimen/lrtbp_25"
+                                                        android:layout_height="@dimen/lrtbp_25"
+                                                        android:layout_gravity="center"
+                                                        android:layout_margin="@dimen/lrtbp_5"
+                                                        android:background="@null"
+                                                        android:scaleType="fitXY"
+                                                        android:src="@drawable/ic_menu_share" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:id="@+id/detaillay"
+                                                    android:layout_width="fill_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_below="@+id/topLay"
+                                                    android:orientation="vertical">
+
+                                                    <TextView
+                                                        android:layout_width="fill_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_weight="1.0"
+                                                        android:padding="@dimen/lrtbp_5"
+                                                        android:text="துல்லியமாக எதிர்கால பலன்கள் அறிந்து கொள்ளலாம். விதியை உறைப்போம் . மதியால் மாற்றம் பெறுவோம்."
+                                                        android:textColor="@color/black"
+                                                        android:textSize="@dimen/txt_10" />
+                                                </LinearLayout>
+                                            </RelativeLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/bottomLay"
+                                                android:layout_width="fill_parent"
+                                                android:layout_height="fill_parent"
+                                                android:gravity="center"
+                                                android:orientation="horizontal">
+
+                                                <LinearLayout
+                                                    android:layout_width="fill_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1.0"
+                                                    android:gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="@dimen/lrtbp_25"
+                                                        android:layout_height="wrap_content"
+                                                        android:src="@drawable/call" />
+
+                                                    <TextView
+                                                        android:id="@+id/send_msg"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:background="@drawable/spinner"
+                                                        android:text="+91 8526935727"
+                                                        android:textColor="#ff045603"
+                                                        android:textSize="@dimen/txt_10"
+                                                        android:textStyle="bold" />
+                                                </LinearLayout>
+
+                                                <Button
+                                                    android:id="@+id/register"
+                                                    android:layout_width="100.0dip"
+                                                    android:layout_height="@dimen/wh_40"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_gravity="end"
+                                                    android:gravity="center"
+                                                    android:padding="@dimen/lrtbp_5"
+                                                    android:text="view details"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="@dimen/lrtbp_10" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+
+                                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="100.0dip"
+                                    android:layout_height="100.0dip"
+                                    android:layout_marginLeft="@dimen/lrtbp_10"
+                                    android:layout_marginTop="@dimen/wh_35"
+                                    card_view:cardBackgroundColor="@color/white"
+                                    card_view:cardCornerRadius="@dimen/lrtbp_5"
+                                    card_view:cardElevation="@dimen/lrtbp_10"
+                                    card_view:cardUseCompatPadding="false">
+
+                                    <ImageView
+                                        android:id="@+id/profilephoto"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="fill_parent"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/privacy" />
+                                </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.0"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/lrtbp_5"
+                                        android:src="@drawable/privacy" />
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/wh_2"
+                                            android:layout_weight="5.0"
+                                            android:src="@drawable/call" />
+
+                                        <TextView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.0"
+                                            android:background="@drawable/spinner"
+                                            android:text="+91 8526935727"
+                                            android:textColor="#ff045603"
+                                            android:textSize="@dimen/txt_10"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="2.0dip"
+                                    android:layout_height="fill_parent"
+                                    android:layout_margin="@dimen/wh_2"
+                                    android:background="#ffd9d5d5" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="வாஸ்து மற்றும் கணித ஜோதிடம்"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/pink3"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:drawableRight="@drawable/ic_menu_share"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="துல்லியமாக எதிர்கால பலன்கள் அறிந்து கொள்ளலாம். விதியை உறைப்போம் . மதியால் மாற்றம் பெறுவோம்."
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_10" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.0"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/lrtbp_5"
+                                        android:src="@drawable/privacy" />
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/wh_2"
+                                            android:layout_weight="5.0"
+                                            android:src="@drawable/call" />
+
+                                        <TextView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.0"
+                                            android:background="@drawable/spinner"
+                                            android:text="+91 8526935727"
+                                            android:textColor="#ff045603"
+                                            android:textSize="@dimen/txt_10"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="2.0dip"
+                                    android:layout_height="fill_parent"
+                                    android:layout_margin="@dimen/wh_2"
+                                    android:background="#ffd9d5d5" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="வாஸ்து மற்றும் கணித ஜோதிடம்"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/pink3"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:drawableRight="@drawable/ic_menu_share"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="துல்லியமாக எதிர்கால பலன்கள் அறிந்து கொள்ளலாம். விதியை உறைப்போம் . மதியால் மாற்றம் பெறுவோம்."
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_10" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.0"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/lrtbp_5"
+                                        android:src="@drawable/privacy" />
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/wh_2"
+                                            android:layout_weight="5.0"
+                                            android:src="@drawable/call" />
+
+                                        <TextView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.0"
+                                            android:background="@drawable/spinner"
+                                            android:text="+91 8526935727"
+                                            android:textColor="#ff045603"
+                                            android:textSize="@dimen/txt_10"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="2.0dip"
+                                    android:layout_height="fill_parent"
+                                    android:layout_margin="@dimen/wh_2"
+                                    android:background="#ffd9d5d5" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="வாஸ்து மற்றும் கணித ஜோதிடம்"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/pink3"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:drawableRight="@drawable/ic_menu_share"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="துல்லியமாக எதிர்கால பலன்கள் அறிந்து கொள்ளலாம். விதியை உறைப்போம் . மதியால் மாற்றம் பெறுவோம்."
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_10" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/lrtbp_5"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="5.0dip"
+                            app:cardElevation="@dimen/lrtbp_5">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.0"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/lrtbp_5"
+                                        android:src="@drawable/privacy" />
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/wh_2"
+                                            android:layout_weight="5.0"
+                                            android:src="@drawable/call" />
+
+                                        <TextView
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.0"
+                                            android:background="@drawable/spinner"
+                                            android:text="+91 8526935727"
+                                            android:textColor="#ff045603"
+                                            android:textSize="@dimen/txt_10"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="2.0dip"
+                                    android:layout_height="fill_parent"
+                                    android:layout_margin="@dimen/wh_2"
+                                    android:background="#ffd9d5d5" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="வாஸ்து மற்றும் கணித ஜோதிடம்"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/pink3"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:drawableRight="@drawable/ic_menu_share"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:text="துல்லியமாக எதிர்கால பலன்கள் அறிந்து கொள்ளலாம். விதியை உறைப்போம் . மதியால் மாற்றம் பெறுவோம்."
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/txt_10" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.0"
+                    android:background="@color/red"
+                    android:gravity="bottom|center|right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/edit"
+                        android:padding="@dimen/lrtbp_10"
+                        android:text="Edit Profile"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/p_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/lrtbp_10"
+                android:text="Ranjith"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/p_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/p_name"
+                android:layout_centerHorizontal="true"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="@dimen/lrtbp_20"
+                app:cardElevation="@dimen/lrtbp_5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/lrtbp_5"
+                    android:src="@drawable/profile" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/p_img"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/lrtbp_10"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="@dimen/lrtbp_10"
+                    app:cardElevation="@dimen/lrtbp_5">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/lrtbp_10">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:text="செல்லப்பிராணிகள் உணவுகள் - சேவைகள் - துணைக்கருவிகள்"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:gravity="end|center"
+                                    android:text="Free Ad Post"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lrtbp_5"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/lrtbp_5">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/lrtbp_5"
+                                    android:layout_weight="2.0"
+                                    app:cardBackgroundColor="@android:color/white"
+                                    app:cardCornerRadius="@dimen/lrtbp_20"
+                                    app:cardElevation="@dimen/lrtbp_5">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/profile" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="General insurance"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:textColor="@color/red"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="National insurance at vellankovil, Gobichettipalayam"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/red"
+                                    android:padding="@dimen/wh_2"
+                                    android:text="Expired"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:background="@color/red" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/call"
+                                        android:text="\ 8526935727"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="No.of Districts"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="5"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Exp. Date"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="31/08/2019"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/lrtbp_10"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="@dimen/lrtbp_10"
+                    app:cardElevation="@dimen/lrtbp_5">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/lrtbp_10">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:text="டிரைவர்கள் &amp; டாக்ஸி"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2.5"
+                                    android:gravity="end"
+                                    android:text="Free Ad Post"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lrtbp_5"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/lrtbp_5">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/lrtbp_5"
+                                    android:layout_weight="2.0"
+                                    app:cardBackgroundColor="@android:color/white"
+                                    app:cardCornerRadius="@dimen/lrtbp_20"
+                                    app:cardElevation="@dimen/lrtbp_5">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="@dimen/lrtbp_5"
+                                        android:src="@drawable/profile" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="ALL INSURANCE POLICIES PLAN ADVISOR"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                        android:textColor="@color/red"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="LIC , STAR HEALTH INSURANCE, NEW INDIA INSURANCE"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#ff4caf50"
+                                    android:padding="@dimen/wh_2"
+                                    android:text="Live"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/wh_2"
+                                android:background="@color/red" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:drawableLeft="@drawable/call"
+                                        android:text="\ 8526935727"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="No.of Districts"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="5"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Exp. Date"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                                    <TextView
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="31/08/2019"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_settings" />
+    <string name="app_name">Resume Builder</string>
+
+
+    <string name="cancel">cancel</string>
+    <string name="screen_identification">sw800dp</string>
+
+    <string name="confirm">select</string>
+    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
+    <string name="crop_image_activity_title" />
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="customtxt">Please add your <b>Photo and Signature</b> to generate the resume</string>
+    <string name="default_web_client_id">22073589686-0ien8kathp0qgn1stvo9mdcko9mrrldv.apps.googleusercontent.com</string>
+
+    <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="firebase_database_url">https://api-project-22073589686.firebaseio.com</string>
+    <string name="gcm_defaultSenderId">22073589686</string>
+    <string name="google_api_key">AIzaSyDYd2LIZSpLqE1lYi7a4fOExATfI_E4xoM</string>
+    <string name="google_app_id">1:22073589686:android:59e8cb06c517f8c3</string>
+    <string name="google_crash_reporting_api_key">AIzaSyDYd2LIZSpLqE1lYi7a4fOExATfI_E4xoM</string>
+    <string name="google_storage_bucket">api-project-22073589686.appspot.com</string>
+
+    <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+    <string name="nav_header_desc" />
+    <string name="nav_header_subtitle" />
+    <string name="nav_header_title" />
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="password_toggle_content_description">Show password</string>
+
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="pp">" "<u>*Privacy Policy(தனியுரிமை கொள்கை)</u></string>
+    <string name="project_id">api-project-22073589686</string>
+
+    <string name="search_menu_title">Search</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="autority">nithra.resume.maker.cv.builder.app.provider</string>
+</resources>

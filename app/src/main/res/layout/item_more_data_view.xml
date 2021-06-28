@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/add_profile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/lrtbp_10"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="5.0dip"
+        app:cardElevation="@dimen/lrtbp_5">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/lrtbp_5">
+
+            <LinearLayout
+                android:id="@+id/down"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/down_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/lrtbp_5"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/drag" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="@dimen/wh_2">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/extra_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Title"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/named"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/remove"
+                        android:layout_width="@dimen/txt_25"
+                        android:layout_height="@dimen/txt_25"
+                        android:layout_margin="@dimen/lrtbp_5"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/remove_view" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/down_lay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#fffdfbd9"
+                android:padding="@dimen/lrtbp_5"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:id="@+id/len1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/wh_20"
+                            android:layout_margin="@dimen/wh_2"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/wh_20"
+                                android:layout_height="@dimen/wh_20"
+                                android:src="@drawable/copy" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text=" Copy"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="#ff000000" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/wh_1"
+                            android:layout_height="fill_parent"
+                            android:layout_margin="@dimen/wh_2"
+                            android:background="#ffc9c8c8" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/wh_20"
+                            android:layout_margin="@dimen/wh_2"
+                            android:layout_weight="0.9"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/wh_20"
+                                android:layout_height="@dimen/wh_20"
+                                android:src="@drawable/copy" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Resumes"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="#ff000000" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/vi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/wh_1"
+                        android:layout_below="@+id/len1"
+                        android:layout_marginLeft="@dimen/lrtbp_15"
+                        android:layout_marginTop="@dimen/lrtbp_5"
+                        android:layout_marginRight="@dimen/lrtbp_15"
+                        android:layout_marginBottom="@dimen/lrtbp_5"
+                        android:background="#ffc9c8c8" />
+
+                    <LinearLayout
+                        android:id="@+id/len2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vi"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/wh_20"
+                            android:layout_margin="@dimen/wh_2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/wh_20"
+                                android:layout_height="@dimen/wh_20"
+                                android:src="@drawable/copy" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text=" Generate"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="#ff000000" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

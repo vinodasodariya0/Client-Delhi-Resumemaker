@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="alert_button">18.0dip</dimen>
+    <dimen name="alert_heading">24.0dip</dimen>
+    <dimen name="alert_message">18.0dip</dimen>
+    <dimen name="first_screen_title">30.0dip</dimen>
+    <dimen name="first_start_button_margin_bottom">50.0dip</dimen>
+    <dimen name="first_start_button_margin_top">25.0dip</dimen>
+    <dimen name="heading_font_size">20.0dip</dimen>
+    <dimen name="heading_marginleft">20.0dip</dimen>
+    <dimen name="heading_marginright">20.0dip</dimen>
+    <dimen name="heading_margintop">10.0dip</dimen>
+    <dimen name="home_screen_margin_top">6.0dip</dimen>
+    <dimen name="home_screen_topic_heading_text_size">14.0dip</dimen>
+    <dimen name="home_screen_topic_heading_text_size1">16.0dip</dimen>
+    <dimen name="home_screen_topic_heading_text_size2">18.0dip</dimen>
+    <dimen name="home_screen_topic_substatus_mraginleft1">75.0dip</dimen>
+    <dimen name="home_screen_topic_substatus_mraginleft2">165.0dip</dimen>
+    <dimen name="info_company_more_detail_font_size">15.0dip</dimen>
+    <dimen name="info_company_name_font_size">17.0dip</dimen>
+    <dimen name="info_margin_bottom">10.0dip</dimen>
+    <dimen name="info_margin_left">10.0dip</dimen>
+    <dimen name="info_margin_right">10.0dip</dimen>
+    <dimen name="info_margin_step_top">5.0dip</dimen>
+    <dimen name="info_margin_top">10.0dip</dimen>
+    <dimen name="info_version_name_font_size">14.0dip</dimen>
+    <dimen name="wh_340">340.0dip</dimen>
+    <dimen name="wh_35">35.0dip</dimen>
+</resources>

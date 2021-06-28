@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#88000000">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="180.0dip"
+        android:layout_marginRight="10.0dip"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="5.0dip"
+        app:cardElevation="5.0dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5.0dip"
+                android:text="Notification ON / OFF"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorPrimary2"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10.0dip">
+
+                <RadioGroup
+                    android:id="@+id/noti_grp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/outline"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/noti_off"
+                        android:layout_width="80.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="1.0dip"
+                        android:layout_marginBottom="1.0dip"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/switch_off"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="5.0dip"
+                        android:text="OFF"
+                        android:textColor="@drawable/switch_text" />
+
+                    <RadioButton
+                        android:id="@+id/noti_on"
+                        android:layout_width="80.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="1.0dip"
+                        android:layout_marginBottom="1.0dip"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/switch_on"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="5.0dip"
+                        android:text="ON"
+                        android:textColor="@drawable/switch_text" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

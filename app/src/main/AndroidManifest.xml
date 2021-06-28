@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nithra.resume.maker.cv.builder.app">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".Fcm.App_analytics"
+        android:allowBackup="true"
+        android:icon="@drawable/resumeicon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/resumeicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+
+        <activity
+            android:name="nithra.resume.maker.cv.builder.app.Activity.Splashscreen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="nithra.resume.maker.cv.builder.app.Activity.Profiles_View_Activity" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Preview" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_10" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_11" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_12" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_13" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_14" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_15" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_16" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_17" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_18" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_19" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_20" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Formates.Format_21" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Activity.Main_policy" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Activity.Sample_Activity" />
+        <activity
+            android:name="nithra.resume.maker.cv.builder.app.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="nithra.resume.maker.cv.builder.app.Activity.Resume_Activity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Fcm.ST_Activity" />
+        <activity android:name="nithra.resume.maker.cv.builder.app.Fcm.Noti_Fragment" />
+
+
+        <receiver
+            android:name="nithra.resume.maker.cv.builder.app.Fcm.referrer"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="nithra.resume.maker.cv.builder.app.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <activity
+            android:name="nithra.resume.maker.cv.builder.app.crop_image.CropImageActivity"
+            android:theme="@style/AppTheme2" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+    </application>
+
+</manifest>

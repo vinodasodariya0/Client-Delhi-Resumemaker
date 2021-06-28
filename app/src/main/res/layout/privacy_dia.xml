@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#88555555"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="#ffffffff"
+        card_view:cardCornerRadius="@dimen/lrtbp_5">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/lrtbp_10"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/wh_35"
+                        android:layout_height="@dimen/wh_35"
+                        android:background="@drawable/resumeicon"
+                        android:gravity="center|left"
+                        android:padding="@dimen/lrtbp_5"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/privacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:padding="@dimen/lrtbp_5"
+                        android:text="   Privacy Policy"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#ff000000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/editText1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/lrtbp_10"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="#ff000000" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/lrtbp_5">
+
+                    <TextView
+                        android:id="@+id/btnSet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/lrtbp_10"
+                        android:layout_weight="0.33"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/lrtbp_5"
+                        android:paddingBottom="@dimen/lrtbp_5"
+                        android:text="Privacy Policy"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/btnok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/lrtbp_10"
+                        android:layout_weight="0.33"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/lrtbp_5"
+                        android:paddingBottom="@dimen/lrtbp_5"
+                        android:text="Agree"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

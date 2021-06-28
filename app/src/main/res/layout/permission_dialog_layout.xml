@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_profile"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/lrtbp_10"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="5.0dip"
+    app:cardElevation="@dimen/lrtbp_5">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtfd"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:lineSpacingExtra="5.0dip"
+            android:padding="10.0dip"
+            android:text="Resume Builder"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="#ffffffff"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center"
+            android:lineSpacingExtra="5.0dip"
+            android:padding="10.0dip"
+            android:text="You need to allow the Storage Permission to add photo or signature in your Resume"
+            android:textColor="#ff000000"
+            android:textSize="15.0dip"
+            android:textStyle="bold|italic" />
+
+        <View
+            android:layout_width="300.0dip"
+            android:layout_height="1.0dip" />
+
+        <TextView
+            android:id="@+id/permission_ok"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_gravity="center"
+            android:background="#ffffffff"
+            android:gravity="center"
+            android:text="  OK  "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#ff000000"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

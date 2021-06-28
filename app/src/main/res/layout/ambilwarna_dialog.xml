@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ambilwarna_dialogView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/ambilwarna_viewContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="8.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingBottom="8.0dip">
+
+        <nithra.resume.maker.cv.builder.app.color.AmbilWarnaSquare
+            android:id="@+id/ambilwarna_viewSatBri"
+            android:layout_width="@dimen/wh_240"
+            android:layout_height="@dimen/wh_240"
+            android:layerType="software" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_viewHue"
+            android:layout_width="@dimen/lrtbp_30"
+            android:layout_height="@dimen/wh_240"
+            android:layout_marginLeft="8.0dip"
+            android:layout_toRightOf="@+id/ambilwarna_viewSatBri"
+            android:scaleType="fitXY"
+            android:src="@drawable/ambilwarna_hue" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_alphaCheckered"
+            android:layout_width="@dimen/lrtbp_30"
+            android:layout_height="@dimen/wh_240"
+            android:layout_marginLeft="8.0dip"
+            android:layout_toRightOf="@+id/ambilwarna_viewHue"
+            android:scaleType="fitXY"
+            android:src="@drawable/add_white"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/ambilwarna_overlay"
+            android:layout_width="8.0dip"
+            android:layout_height="8.0dip"
+            android:layout_marginLeft="8.0dip"
+            android:layout_toRightOf="@+id/ambilwarna_viewHue" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_cursor"
+            android:layout_width="9.0dip"
+            android:layout_height="9.0dip"
+            android:scaleType="matrix"
+            android:src="@drawable/profile_bg" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_alphaCursor"
+            android:layout_width="9.0dip"
+            android:layout_height="9.0dip"
+            android:scaleType="matrix"
+            android:src="@drawable/notification_ic" />
+
+        <ImageView
+            android:id="@+id/ambilwarna_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="matrix"
+            android:src="@drawable/ambilwarna_target" />
+
+        <LinearLayout
+            android:id="@+id/ambilwarna_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ambilwarna_viewSatBri"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8.0dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="@dimen/wh_80"
+                android:layout_height="@dimen/wh_50">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/remove_view" />
+
+                <View
+                    android:id="@+id/ambilwarna_newColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#ffaaaaff" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/opentnpsc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/lrtbp_5"
+        android:padding="@dimen/lrtbp_10"
+        card_view:cardBackgroundColor="@android:color/transparent"
+        card_view:cardCornerRadius="@dimen/wh_1"
+        card_view:cardElevation="@dimen/lrtbp_5">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/lrtbp_5">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/wh_50"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/wh_2">
+
+                <ImageView
+                    android:id="@+id/cunt"
+                    android:layout_width="@dimen/wh_35"
+                    android:layout_height="@dimen/wh_35"
+                    android:layout_centerInParent="true"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ffffffff"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/item_lay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/cunt"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/wh_40"
+                    android:layout_centerInParent="true"
+                    android:maxLines="2"
+                    android:text="TextViewTextViewTextViewTextViewTextVieTextViewTextViewTextViewTextViewTextVieww"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#ff1159d6" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <Button
+                            android:layout_width="@dimen/lrtbp_25"
+                            android:layout_height="@dimen/lrtbp_25"
+                            android:layout_gravity="center"
+                            android:background="@drawable/calendar" />
+
+                        <TextView
+                            android:id="@+id/date_txt"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#ff000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.33"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/time_iconn"
+                            android:layout_width="@dimen/lrtbp_20"
+                            android:layout_height="@dimen/lrtbp_20"
+                            android:layout_gravity="center"
+                            android:background="@drawable/time_icon"
+                            android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
+
+                            <TextView
+                                android:id="@+id/time_txt"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_toLeftOf="@+id/del_card"
+                                android:textAppearance="?android:textAppearanceSmall"
+                                android:textColor="#ff000000"
+                                android:visibility="visible" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/del_card"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/wh_35"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/wh_2"
+                                android:layout_weight="0.33"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                card_view:cardBackgroundColor="#ff1159d6">
+
+                                <Button
+                                    android:id="@+id/del_but"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.33"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center"
+                                    android:padding="@dimen/lrtbp_5"
+                                    android:text="நீக்குக "
+                                    android:textAppearance="?android:textAppearanceMedium"
+                                    android:textColor="#ffffffff"
+                                    android:typeface="sans"
+                                    android:visibility="gone" />
+                            </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
