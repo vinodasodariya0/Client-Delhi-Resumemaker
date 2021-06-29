@@ -18,7 +18,7 @@
     <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
     <string name="crop_image_menu_rotate_right">Rotate</string>
     <string name="customtxt">Please add your <b>Photo and Signature</b> to generate the resume</string>
-    <string name="default_web_client_id">22073589686-0ien8kathp0qgn1stvo9mdcko9mrrldv.apps.googleusercontent.com</string>
+   <!-- <string name="default_web_client_id">22073589686-0ien8kathp0qgn1stvo9mdcko9mrrldv.apps.googleusercontent.com</string>
 
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="firebase_database_url">https://api-project-22073589686.firebaseio.com</string>
@@ -26,7 +26,7 @@
     <string name="google_api_key">AIzaSyDYd2LIZSpLqE1lYi7a4fOExATfI_E4xoM</string>
     <string name="google_app_id">1:22073589686:android:59e8cb06c517f8c3</string>
     <string name="google_crash_reporting_api_key">AIzaSyDYd2LIZSpLqE1lYi7a4fOExATfI_E4xoM</string>
-    <string name="google_storage_bucket">api-project-22073589686.appspot.com</string>
+    <string name="google_storage_bucket">api-project-22073589686.appspot.com</string>-->
 
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string name="nav_header_desc" />
@@ -38,7 +38,7 @@
 
     <string name="pick_image_intent_chooser_title">Select source</string>
     <string name="pp">" "<u>*Privacy Policy(தனியுரிமை கொள்கை)</u></string>
-    <string name="project_id">api-project-22073589686</string>
+    <!--<string name="project_id">api-project-22073589686</string>-->
 
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>

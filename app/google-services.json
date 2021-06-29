@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "295808671384",
+    "project_id": "resumebuider-df87d",
+    "storage_bucket": "resumebuider-df87d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295808671384:android:5f5a9716810ea91b21baed",
+        "android_client_info": {
+          "package_name": "nithra.resume.maker.cv.builder.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295808671384-feja2ns81hiubkmagbp2bvlq0piq9bi4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nithra.resume.maker.cv.builder.app",
+            "certificate_hash": "8e8562ca625fcf79160f23bb4aafc97771383a34"
+          }
+        },
+        {
+          "client_id": "295808671384-47vts39or1ofv3cuck0qd1d1g0rce4uf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3Kd4RVWBqsk6FUI1mhvN--Q6XjpFVqac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295808671384-47vts39or1ofv3cuck0qd1d1g0rce4uf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

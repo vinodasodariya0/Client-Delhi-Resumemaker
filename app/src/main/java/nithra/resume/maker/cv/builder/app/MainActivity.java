@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
@@ -41,6 +42,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -74,8 +76,11 @@ import com.google.android.gms.ads.formats.NativeAppInstallAdView;
 import com.google.android.gms.ads.formats.NativeContentAd;
 import com.google.android.gms.ads.formats.NativeContentAdView;
 import com.google.android.gms.measurement.api.AppMeasurementSdk;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 
 import org.json.JSONException;
@@ -362,7 +367,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 linearLayout.removeAllViews();
                 linearLayout.addView(adView);
             }
-        } catch (Exception unused) {
+        } catch (Exception ignored) {
         }
     }
 
@@ -407,6 +412,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    private void sendRegistrationToServer(String str) {
+        String str2 = "TAG";
+        Log.e(str2, "sendRegistrationToServer: " + str);
+        PrintStream printStream = System.out;
+        printStream.println("sendRegistrationToServer: " + str);
+        new SharedPreference().putString(this, "token", str);
+        ServerUtilities.gcmpost(str, Utils.android_id(this), Utils.versionname_get(this), Utils.versioncode_get(this), this);
+    }
+
+    private void storeRegIdInPref(String str) {
+        SharedPreferences.Editor edit = getApplicationContext().getSharedPreferences(Config.SHARED_PREF, 0).edit();
+        edit.putString("regId", str);
+        edit.commit();
+    }
+
 
     @Override
     // android.support.v7.app.AppCompatActivity, android.support.v4.app.SupportActivity, android.support.v4.app.FragmentActivity
@@ -415,6 +435,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().build());
         super.onCreate(bundle);
         setContentView(R.layout.activity_main);
+
+
+
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            //Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+                            return;
+                        }
+
+                        // Get new FCM registration token
+                        String token = task.getResult();
+
+                        Log.e("TAG", "onComplete: "+token);
+                        // Log and toast
+                      /*  String msg = getString(R.string.msg_token_fmt, token);
+                        Log.d(TAG, msg);*/
+                        //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+
+
+
+                        storeRegIdInPref(token);
+                        sendRegistrationToServer(token);
+                        Intent intent = new Intent(Config.REGISTRATION_COMPLETE);
+                        intent.putExtra("token", token);
+                        LocalBroadcastManager.getInstance(MainActivity.this).sendBroadcast(intent);
+                    }
+                });
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         add_profile = (CardView) findViewById(R.id.add_profile);
         en_name = (AppCompatEditText) findViewById(R.id.en_name);

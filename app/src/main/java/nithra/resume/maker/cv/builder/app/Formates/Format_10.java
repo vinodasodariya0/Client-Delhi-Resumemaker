@@ -3,6 +3,7 @@ package nithra.resume.maker.cv.builder.app.Formates;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,8 +12,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.FileUtils;
 import android.os.StrictMode;
-
 
 
 import android.util.Log;
@@ -27,6 +28,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.FileProvider;
 
 import com.google.android.gms.measurement.api.AppMeasurementSdk;
 
@@ -37,6 +39,8 @@ import java.io.PrintStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import nithra.resume.maker.cv.builder.app.Activity.FileManager;
 import nithra.resume.maker.cv.builder.app.BoxLoaderView;
 import nithra.resume.maker.cv.builder.app.MainActivity;
 import nithra.resume.maker.cv.builder.app.PdfWriter;
@@ -113,23 +117,19 @@ public class Format_10 extends AppCompatActivity {
     String title;
     Dialog wait_dialog;
 
-    public static File getExternalBreezyDirectory() {
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString() + "/Nithra/ResumeBuilder");
-        PrintStream printStream = System.out;
-        printStream.println("dir==1" + file);
-        if (!file.exists()) {
-            file.mkdirs();
-        }
-        return file;
-    }
 
 
-    @Override // android.support.v7.app.AppCompatActivity, android.support.v4.app.SupportActivity, android.support.v4.app.FragmentActivity
+
+    @Override
+    // android.support.v7.app.AppCompatActivity, android.support.v4.app.SupportActivity, android.support.v4.app.FragmentActivity
     public void onCreate(Bundle bundle) {
         String str;
         super.onCreate(bundle);
         StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().build());
         setContentView(R.layout.preview_activity);
+
+
+        Log.e("TAG", "onCreate: 10101010101010");
         this.mWebView = (WebView) findViewById(R.id.webview);
         this.ads_lay = (LinearLayout) findViewById(R.id.ads_lay);
         this.save = (CardView) findViewById(R.id.save);
@@ -164,6 +164,7 @@ public class Format_10 extends AppCompatActivity {
         this.save.setOnClickListener(new View.OnClickListener() {
             /* class nithra.resume.maker.cv.builder.app.Formates.Format_10.AnonymousClass2 */
 
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onClick(View view) {
                 if (Format_10.this.sp.getInt(Format_10.this, "permissiond") == 1) {
                     try {
@@ -712,6 +713,7 @@ public class Format_10 extends AppCompatActivity {
         return "<!DOCTYPE html><html>    <title>NithrA - Resume Template 10</title>    <meta charset='UTF-8'>    <link rel='stylesheet' href='css/10.css'>    <link rel='stylesheet' href='css/font-awesome.min.css'>    <style>        @page { size: A4 portrait;margin: 7.5mm 2.5mm 7.5mm 7.5mm;cover-letter {page-break-after: always;}}    </style>    <body class='w3-templete_background'>        <div class='w3-content' style='max-width:1400px;'>" + this.cover_letter + "            <div class='w3-no-break w3-row w3-container'>                " + this.image + this.personal + "            </div>            <div class='w3-row w3-container'>" + this.objective + this.education + this.experience + this.project + this.intrest + this.skill + this.explore + this.achive + this.curricular + this.strength + this.hobbi + this.info + this.reference + this.declar + "                <div class='w3-row'>                    <div class='w3-container'>                                <h6>                                    <table>                                        <tr><td width='7%'>Date</td><td width='1%'> : </td><td width='84.5%'>" + this.date + "</td><td>Signature,</td></tr>                                        <tr><td width='7%'>Place</td><td  width='1%'> : </td><td width='80%'>" + this.place + "</td>" + this.sign + "</tr>                                                                           </table>                                </h6>" + this.sign_btm_name + "                         </div>                </div>            </div>        </div>        <script>        </script>    </body></html>";
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void createPdfFile() {
         try {
             File createEmptyFile = createEmptyFile();
@@ -721,7 +723,14 @@ public class Format_10 extends AppCompatActivity {
                 public void onWriteFinished() {
                     Format_10.this.wait_dialog.dismiss();
                     Toast.makeText(Format_10.this.getApplicationContext(), "Resume generated successfully", Toast.LENGTH_SHORT).show();
-                    Uri fromFile = Uri.fromFile(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM) + "/Nithra/ResumeBuilder/" + Format_10.this.fileName));
+
+                    Log.e("TAG", "onWriteFinished: "+FileManager.getfile(Format_10.this,fileName).getAbsolutePath() );
+
+                    Uri fromFile = Uri.fromFile(FileManager.getfile(Format_10.this,fileName));
+
+
+                  // Uri fromFile = FileProvider.getUriForFile(Format_10.this,getString(R.string.autority),FileManager.getfile(Format_10.this,fileName));
+
                     Intent intent = new Intent("android.intent.action.VIEW");
                     intent.setFlags(67108864);
                     intent.setDataAndType(fromFile, "application/pdf");
@@ -745,8 +754,11 @@ public class Format_10 extends AppCompatActivity {
     }
 
     private File createEmptyFile() throws IOException {
+
+
+        Log.e("TAG", "createEmptyFile: 10101010");
         this.fileName = this.sp.getString(this, "profile_name") + "_Functional Resume.pdf";
-        File externalBreezyDirectory = getExternalBreezyDirectory();
+        File externalBreezyDirectory = FileManager.getExternalBreezyDirectory(this);
         PrintStream printStream = System.out;
         printStream.println("dir==" + externalBreezyDirectory);
         File file = new File(externalBreezyDirectory, this.fileName);
@@ -822,7 +834,8 @@ public class Format_10 extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    @Override // android.support.v4.app.ActivityCompat.OnRequestPermissionsResultCallback, android.support.v4.app.FragmentActivity
+    @Override
+    // android.support.v4.app.ActivityCompat.OnRequestPermissionsResultCallback, android.support.v4.app.FragmentActivity
     public void onRequestPermissionsResult(int i, String[] strArr, int[] iArr) {
         if (i != 151) {
             super.onRequestPermissionsResult(i, strArr, iArr);
@@ -843,7 +856,8 @@ public class Format_10 extends AppCompatActivity {
         new AmbilWarnaDialog(this, this.color, z, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             /* class nithra.resume.maker.cv.builder.app.Formates.Format_10.AnonymousClass8 */
 
-            @Override // nithra.resume.maker.cv.builder.app.color.AmbilWarnaDialog.OnAmbilWarnaListener
+            @Override
+            // nithra.resume.maker.cv.builder.app.color.AmbilWarnaDialog.OnAmbilWarnaListener
             public void onOk(AmbilWarnaDialog ambilWarnaDialog, int i) {
                 Toast.makeText(Format_10.this, "ok", 0).show();
                 Format_10 format_10 = Format_10.this;
@@ -854,7 +868,8 @@ public class Format_10 extends AppCompatActivity {
                 }
             }
 
-            @Override // nithra.resume.maker.cv.builder.app.color.AmbilWarnaDialog.OnAmbilWarnaListener
+            @Override
+            // nithra.resume.maker.cv.builder.app.color.AmbilWarnaDialog.OnAmbilWarnaListener
             public void onCancel(AmbilWarnaDialog ambilWarnaDialog) {
                 Toast.makeText(Format_10.this, "cancel", 0).show();
             }
