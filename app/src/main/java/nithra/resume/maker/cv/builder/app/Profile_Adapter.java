@@ -31,6 +31,7 @@ import nithra.resume.maker.cv.builder.app.showcase.MaterialShowcaseView;
 import nithra.resume.maker.cv.builder.app.showcase.ShowcaseConfig;
 
 public class Profile_Adapter extends RecyclerView.Adapter<Profile_Adapter.ViewHolder> {
+
     static String SHOWCASE_ID = "PERSONAL_VIEW";
     static ArrayList<DB_Items> alName;
     Context context;
@@ -42,7 +43,7 @@ public class Profile_Adapter extends RecyclerView.Adapter<Profile_Adapter.ViewHo
         alName = arrayList;
     }
 
-    @Override // android.support.v7.widget.RecyclerView.Adapter
+    @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_profile, viewGroup, false));
     }
@@ -64,7 +65,6 @@ public class Profile_Adapter extends RecyclerView.Adapter<Profile_Adapter.ViewHo
             viewHolder.profile_img.setBackgroundResource(R.drawable.resumeicon);
         }
         viewHolder.setClickListener(new ItemClickListener() {
-            /* class nithra.resume.maker.cv.builder.app.Profile_Adapter.AnonymousClass1 */
 
             @Override // nithra.resume.maker.cv.builder.app.Profile_Adapter.ItemClickListener
             public void onClick(View view, int i, boolean z) {
@@ -78,7 +78,6 @@ public class Profile_Adapter extends RecyclerView.Adapter<Profile_Adapter.ViewHo
             }
         });
         viewHolder.copy.setOnClickListener(new View.OnClickListener() {
-            /* class nithra.resume.maker.cv.builder.app.Profile_Adapter.AnonymousClass2 */
 
             public void onClick(View view) {
                 Profile_Adapter.this.sp.putString(Profile_Adapter.this.context, "copy", "yes");
@@ -94,14 +93,12 @@ public class Profile_Adapter extends RecyclerView.Adapter<Profile_Adapter.ViewHo
             }
         });
         viewHolder.delete.setOnClickListener(new View.OnClickListener() {
-            /* class nithra.resume.maker.cv.builder.app.Profile_Adapter.AnonymousClass3 */
 
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Profile_Adapter.this.context);
                 builder.setMessage("Are you sure want to delete this profile?").setCancelable(false).setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    /* class nithra.resume.maker.cv.builder.app.Profile_Adapter.AnonymousClass3.AnonymousClass2 */
 
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                    public void onClick(DialogInterface dialogInterface, int ii) {
                         SQLiteDatabase sQLiteDatabase = Profile_Adapter.this.myDB;
                         sQLiteDatabase.execSQL("delete from profile_table where profile_id ='" + Profile_Adapter.alName.get(i).getProfile_id() + "'");
                         SQLiteDatabase sQLiteDatabase2 = Profile_Adapter.this.myDB;
