@@ -93,7 +93,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                 AlertDialog.Builder builder = new AlertDialog.Builder(CustomAdapter.this.mCtx);
                 builder.setMessage("Do you want delete this Resume?").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                    public void onClick(DialogInterface dialogInterface, int ii) {
                         new File((String) CustomAdapter.this.path.get(i)).delete();
                         CustomAdapter.this.list.remove(i);
                         CustomAdapter.this.path.remove(i);
